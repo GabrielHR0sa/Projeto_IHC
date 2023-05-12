@@ -1,0 +1,5 @@
+Tema:
+
+ O projeto em si tem como foco 2 frentes. A primeira seria um site fechado onde o acesso seria restrito a profissionais da saúde que de tempos em tempos realizam ações nos bairros da cidade para ver se conseguem detectar algum foco de dengue nas casas dos moradores, esse site seria usado como uma forma de agilizar a facilitar o cadastramento de focos por parte desses agentes. A segunda frente seria um site público, onde qualquer pessoa poderia acessar e consultar informações importantes sobre a dengue, como por exemplo: sintomas, como se prevenir e principalmente acompanhar os números de casos no seu bairro / rua, onde esses dados de focos de dengue viriam do site comentado anteriormente. No geral, podemos dizer que nosso projeto visa facilitar o combate a dengue, entregando uma ferramenta que pode auxiliar os agentes de saúde como comentado acima e ainda deixar a população mais informada sobre o assunto e focos da dengue.
+
+ Projeto Interação Humano e Computador - Fatec Taquaritinga.
