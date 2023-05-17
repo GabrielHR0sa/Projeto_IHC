@@ -30,7 +30,7 @@
 
     <div class="formulario">
       <div>
-        <form class="form-signin container">
+        <form method="POST" action="reportController.php" class="form-signin container">
           <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor"
             class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
             <path
@@ -41,20 +41,21 @@
           <h1 class="textos"><strong>Reportar Foco</strong></h1><br>
           <h2 class="textos">Dados - Endereço</h2><br>
 
-          <label for="inputEnd" class="sr-only">Endereço</label>
-          <input type="text" id="inputEnd" class="marginTop" placeholder="Endereço" required="" autofocus="">
+          <label for="Endereco" class="sr-only">Endereço</label>
+          <input type="text" name="Endereco" id="Endereco" class="marginTop" placeholder="Endereço" required="" autofocus="">
           <br>
-          <label for="inputBairro" class="sr-only">Bairro</label>
-          <input type="text" id="inputBairro" class="marginTop" placeholder="Bairro" required="" autofocus="">
+          <label for="Bairro" class="sr-only">Bairro</label>
+          <input type="text" name="Bairro" id="Bairro" class="marginTop" placeholder="Bairro" required="" autofocus="">
           <br>
-          <label for="inputCidade" class="sr-only">Cidade</label>
-          <input type="text" id="inputCidade" class="marginTop" placeholder="Cidade" required="" autofocus="">
+          <label for="Cidade" class="sr-only">Cidade</label>
+          <input type="text" name="Cidade" id="Cidade" class="marginTop" placeholder="Cidade" required="" autofocus="">
           <br>
-          <label for="inputQtd" class="sr-only">Quantidade de Casos</label>
-          <input type="number" id="inputQtd" class="marginTop" placeholder="Quantidade de Casos" required="">
+          <label for="NumCasos" class="sr-only">Quantidade de Casos</label>
+          <input type="number" name="NumCasos" id="NumCasos" class="marginTop" placeholder="Quantidade de Casos" required="">
           <br><br>
           <div class="bloco1">
-            <a href="#" class="bton">Salvar</a>
+            <!--<a href="#" class="bton">Salvar</a>-->
+            <input type="submit" name="acao" value="SALVAR" class="bton">
           </div>
         </form>
       </div>
