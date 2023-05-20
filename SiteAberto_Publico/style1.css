@@ -4,6 +4,12 @@
     padding: 0;
 }
 
+:root {
+    --main-elements-color: #30405c;
+    --main-font-color: #ffffff;
+    --font-color-hover: #00bf63;
+  }
+
 /* ======= MENU SUPERIOR ======= */
 .barra {
     display: flex;
@@ -13,7 +19,7 @@
     justify-content: center;
 
     width: 100%;
-    background-color: #30405c;
+    background-color: var(--main-elements-color);
 
     padding-left: 10%;
     padding-right: 10%;
@@ -23,10 +29,54 @@
     width: 50px;
 }
 
-
-.baixo {
-    justify-content: center;
+/* ======= BODY ======= */
+.contIndex {
+    background-color: #ebebeb;
 }
+
+/* ======= MAIN ======= */
+.infoIndex {
+    margin-top: 100px;
+}
+
+.textos {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.interior {
+    margin-top: 10%;
+}
+
+.contMain {
+    text-align: center;
+
+    background-color: #30405c;
+    padding: 30px 30px;
+    border-radius: 20px;
+}
+
+.textosB {
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.textosB:hover {
+    color: #00bf63;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .menu {
     display: flex;
@@ -34,20 +84,20 @@
 }
 
 .item {
-    color: #fff;
+    color: var(--main-font-color);
     margin-right: 10px;
     padding-top: 20px;
 }
 
 .item:hover {
-    color: #00bf63;
+    color: var(--font-color-hover);
     margin-right: 10px;
 }
 
 
 
 .item_p {
-    color: #fff;
+    color: var(--main-font-color);
     margin-left: 20px;
 }
 
@@ -95,14 +145,15 @@
     margin-top: 10%;
 }
 
+.baixo {
+    justify-content: center;
+}
+
 .inicio {
     display: flex;
     justify-content: start;
 }
 
-.interior {
-    margin-top: 10%;
-}
 
 .penultimo {
     background-color: #00bf63;
@@ -127,10 +178,7 @@
     width: 500px;
 }
 
-.textos {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
+
 
 .formulario {
     display: block;
@@ -193,30 +241,7 @@
     margin-top: 10px;
 }
 
-.textosB {
-    color: #ffffff;
-    margin-top: 10px;
-}
 
-.textosB:hover {
-    color: #00bf63;
-    text-decoration: none;
-}
-
-.infoIndex {
-    margin-top: 100px;
-}
-
-.contIndex {
-    background-color: #ebebeb;
-}
-
-
-.contMain {
-    background-color: #30405c;
-    padding: 30px 30px;
-    border-radius: 20px;
-}
 
 .marginTop {
     margin-top: 10px;
@@ -255,7 +280,7 @@ input {
     align-content: center;
     justify-content: center;
 
-    background-color: #30405c;
+    background-color: var(--main-elements-color);
     
     width: 100%;
     height: 75px;
@@ -263,5 +288,5 @@ input {
 
 .conteudo_final {
     margin-top: 20px;
-    color: #ffffff;
+    color: var(--main-font-color);
 }
