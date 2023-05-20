@@ -15,13 +15,11 @@
 
     $Endereco = isset($_POST['Endereco']) ? $_POST['Endereco'] : null;
     $Bairro = isset($_POST['Bairro']) ? $_POST['Bairro'] : null;
-    $Cidade = isset($_POST['Cidade']) ? $_POST['Cidade'] : null;
-    $NumCasos = isset($_POST['NumCasos']) ? $_POST['NumCasos'] : null;
     $acao = isset($_POST['acao']) ? $_POST['acao'] : '';
 
     if ($acao == "SALVAR") {
 
-        $sql = "INSERT INTO dados (Endereço, Bairro, Cidade, NumCasos) values ('$Endereco', '$Bairro', '$Cidade', '$NumCasos')";
+        $sql = "INSERT INTO dados_endereco (Endereco, Bairro) values ('$Endereco', '$Bairro')";
 
         $retornoSQL = mysqli_query($conexao, $sql);
 

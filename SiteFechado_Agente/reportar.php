@@ -41,19 +41,41 @@
           <h1 class="textos"><strong>Reportar Foco</strong></h1><br>
           <h2 class="textos">Dados - Endereço</h2><br>
 
+
+          
+            <select class="marginTop form-select" id="Bairro" name="Bairro">
+              <option selected>Bairro ...</option>
+              <option value="Centro">Centro</option>
+              <option value="Jardim Santo Antônio">Jardim Santo Antônio</option>
+              <option value="Jardim Paraiso I">Jardim Paraiso I</option>
+            </select>
+          
+
+          <select class="marginTop form-select" id="Endereco" name="Endereco">
+            <option selected>Endereço...</option>
+            <!--CENTRO-->
+            <option value="Rua Campos Sales">Rua Campos Sales</option>
+            <option value="Rua Treze de Maio">Rua Treze de Maio</option>
+            <option value="Rua Marechal Deodoro">Rua Marechal Deodoro</option>
+            <!--JARDIM SANTO ANTONIO-->
+            <option value="Rua Benedito Galdino">Rua Benedito Galdino</option>
+            <option value="Rua Osmar Mantovani">Rua Osmar Mantovani</option>
+            <option value="Rua Rodolfo Silvestre">Rua Rodolfo Silvestre </option>
+            <!--JARDIM PARAISO I-->
+            <option value="Rua Adival Bertoli">Rua Adival Bertoli</option>
+            <option value="Rua Dr. Rafael Lofrano">Rua Dr. Rafael Lofrano</option>
+            <option value="Rua Augusto Troiano">Rua Augusto Troiano</option>
+          </select>
+          <br><br>
+          <!--
           <label for="Endereco" class="sr-only">Endereço</label>
           <input type="text" name="Endereco" id="Endereco" class="marginTop" placeholder="Endereço" required="" autofocus="">
           <br>
           <label for="Bairro" class="sr-only">Bairro</label>
           <input type="text" name="Bairro" id="Bairro" class="marginTop" placeholder="Bairro" required="" autofocus="">
-          <br>
-          <label for="Cidade" class="sr-only">Cidade</label>
-          <input type="text" name="Cidade" id="Cidade" class="marginTop" placeholder="Cidade" required="" autofocus="">
-          <br>
-          <label for="NumCasos" class="sr-only">Quantidade de Casos</label>
-          <input type="number" name="NumCasos" id="NumCasos" class="marginTop" placeholder="Quantidade de Casos" required="">
           <br><br>
           <div class="bloco1">
+          -->
             <!--<a href="#" class="bton">Salvar</a>-->
             <input type="submit" name="acao" value="SALVAR" class="bton">
           </div>

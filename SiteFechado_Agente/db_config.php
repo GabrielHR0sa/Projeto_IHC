@@ -2,7 +2,7 @@
 
 $enderecoServidor = '127.0.0.1';
 $nomeBanco = 'reporte';
-$porta = '3306';
+$porta = '3312';
 $usuario = 'root';
 $senha = '';
 
