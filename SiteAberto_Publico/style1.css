@@ -4,6 +4,26 @@
     padding: 0;
 }
 
+/* ======= MENU SUPERIOR ======= */
+.barra {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+
+    width: 100%;
+    background-color: #30405c;
+
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.imgIndex {
+    width: 50px;
+}
+
+
 .baixo {
     justify-content: center;
 }
@@ -24,9 +44,7 @@
     margin-right: 10px;
 }
 
-.barra {
-    background-color: #30405c;
-}
+
 
 .item_p {
     color: #fff;
@@ -193,9 +211,6 @@
     background-color: #ebebeb;
 }
 
-.imgIndex {
-    width: 60px;
-}
 
 .contMain {
     background-color: #30405c;
