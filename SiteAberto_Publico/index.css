@@ -10,8 +10,7 @@
     --main-background-color: #ebebeb;
     --main-font-color: #ffffff;
     --font-color-hover: #00bf63;
-  }
-
+}
 
 /* ======= INDEX ======= */
 /* ======= MENU SUPERIOR ======= */
@@ -35,7 +34,6 @@
 
 /* ======= BODY ======= */
 .contIndex {
-
     background-color: var(--main-background-color);
 }
 
@@ -81,7 +79,7 @@
     justify-content: center;
 
     background-color: var(--main-elements-color);
-    
+
     width: 100%;
     height: 75px;
 }
