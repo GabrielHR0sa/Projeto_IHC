@@ -1,6 +1,6 @@
 <h1 align="center"> :man: Projeto de IHC :computer:</h1>
 
-Projeto da matéria de Interação Humano e Computador - Fatec Taquaritinga (3º Semestre)
+<p align="center"> Projeto da matéria de Interação Humano e Computador - Fatec Taquaritinga (3º Semestre) </p>
 
 <br />
 
