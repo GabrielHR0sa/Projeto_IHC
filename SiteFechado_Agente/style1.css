@@ -180,7 +180,10 @@
 
 }
 
-input {
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     color: #30405C;
     font-size: 28px;
     width: 100%;
