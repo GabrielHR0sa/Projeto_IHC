@@ -64,24 +64,6 @@
     margin-top: 10px;
 }
 
-input {
-    width: 50% !important;
-
-    color: #30405c;
-    font-size: 28px;
-    padding: 10px 5px 5px;
-    border: 2.5px solid var(--main-elements-color);
-    border-radius: 20px;
-
-    transition: 50ms;
-}
-
-input:focus {
-    box-shadow: 0 0 0 0;
-    outline: 0;
-    border: 5px solid  var(--main-elements-color);
-}
-
 .bloco1 {
     display: flex;
     align-items: center;
@@ -96,7 +78,7 @@ input:focus {
     background-color: #074728;
     color: var(--main-font-color);
 
-    width: 50% !important;
+    width: 40% !important;
 
     border-radius: 7px;
     padding: 10px 40px;
@@ -112,14 +94,11 @@ input:focus {
     text-decoration: none;
 }
 
-.backPesquisa {
-    background-color: #bb0808;
-    border-radius: 15px;
-    padding: 50px 50px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-    margin-top: 10px;
+.form-select {
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    width: 45% !important;
 }
 
 /* ======= RODAPÉ ======= */

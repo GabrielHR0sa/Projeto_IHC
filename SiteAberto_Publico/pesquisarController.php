@@ -10,12 +10,12 @@
             if ($Bairro == "0" || $Bairro == 0) {
                 echo"<script language='javascript' type='text/javascript'>
                 alert('Infelizmente você esqueceu de colocar o BAIRRO do reporte! Preencha ambos os campos');
-                window.location.href='./pesquisar.php';</script>";
+                window.location.href='./pesquisa.html';</script>";
             }
             else if ( $Rua == "0" || $Rua == 0) {
                 echo"<script language='javascript' type='text/javascript'>
                 alert('Infelizmente você esqueceu de colocar a RUA do reporte! Preencha ambos os campos');
-                window.location.href='./pesquisar.php';</script>";
+                window.location.href='./pesquisa.html';</script>";
             }
         }
         else {

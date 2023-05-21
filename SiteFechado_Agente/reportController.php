@@ -11,7 +11,7 @@
         if ($Bairro == "0" || $Bairro == 0 || $Rua == "0" || $Rua == 0) {
             if ($Bairro == "0" || $Bairro == 0) {
                 echo"<script language='javascript' type='text/javascript'>
-                alert('Infelizmente você esqueceu de colocar o BAIRRO do reporte!');
+                alert('Infelizmente você esqueceu de colocar o BAIRRO do reporte! Preencha ambos os campos');
                 window.location.href='./reportar.php';</script>";
             }
             else if ( $Rua == "0" || $Rua == 0) {
