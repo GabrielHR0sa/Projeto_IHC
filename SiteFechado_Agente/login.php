@@ -4,7 +4,7 @@ session_start();
 include_once("db_config.php");
 
 $inputCPF           =       filter_input(INPUT_POST, 'inputCPF',        FILTER_SANITIZE_NUMBER_INT);
-$inputData          =       filter_input(INPUT_POST, 'inputData',       );
+$inputData          =       filter_input(INPUT_POST, 'inputData');
 $inputPassword      =       filter_input(INPUT_POST, 'inputPassword',   FILTER_SANITIZE_STRING);
 $entrar             =       $_POST['entrar'];
 

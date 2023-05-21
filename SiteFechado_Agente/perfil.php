@@ -56,7 +56,7 @@ $CPFUser = $_COOKIE['user'];
               d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z" />
           </svg> Reportar Foco</a>
 
-        <a href="pesquisar.html" class="funcPerfil backPerfil textosB">
+        <a href="pesquisar.php" class="funcPerfil backPerfil textosB">
           <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-search"
             viewBox="0 0 16 16">
             <path
