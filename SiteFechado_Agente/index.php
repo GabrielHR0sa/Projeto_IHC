@@ -1,3 +1,11 @@
+<?php
+
+// Iniciando a sessão e incluindo o arquivo com infos do BD 
+session_start();
+include_once("./db_config.php")
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -37,34 +45,31 @@
 
 
         <div>
-          <form class="form-signin container">
-            <img>
-
+          <form class="form-signin container" method="POST" action="./login.php">
             <label for="inputCPF" class="sr-only">CPF</label>
-            <input type="text" id="inputCPF" class="marginTop" placeholder="CPF (Somente números)" required="" autofocus="">
+            <input type="number" id="inputCPF" name="inputCPF" class="marginTop" placeholder="CPF (Somente números)" required="" autofocus="">
             <br>
             <label for="inputData" class="sr-only">Data Aniversário</label>
-            <input type="text" id="inputData" class="marginTop" placeholder="Escolha sua data de nascimento"  onfocus="(this.type='date')" required="" autofocus="">
+            <input type="text" id="inputData" name="inputData" class="marginTop" placeholder="Escolha sua data de nascimento"  onfocus="(this.type='date')" required="" autofocus="">
             <br>
             <label for="inputPassword" class="sr-only">Senha</label>
-            <input type="password" id="inputPassword" class="marginTop" placeholder="Digite sua Senha" required="">
+            <input type="password" id="inputPassword" name="inputPassword" class="marginTop" placeholder="Digite sua Senha" required="">
             <div class="bloco1">
-              <a href="perfil.html" class="bton">
+              <button type="submit" value="entrar" id="entrar" name="entrar" class="bton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
                   <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-                </svg> ENTRAR
-              </a><br>
-
-              <p class="textos">Em caso de dúvidas, por favor <a href="#" class="textos"><strong>clicar aqui</strong></a></p>
-
+                </svg> 
+                ENTRAR
+              </button>
             </div>
+            <br>
+            <p class="textos">Em caso de dúvidas, por favor <a href="#" class="textos"><strong>clicar aqui</strong></a></p>
           </form>
         </div>
+
       </div>
     </div>
   </main>
-
 </body>
-
 </html>

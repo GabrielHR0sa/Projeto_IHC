@@ -12,4 +12,4 @@ if(!$conexao){
     die('<h1>Erro ao conectar com o Banco de Dados!!!</h1>');
 }
 
-</php>
+?>
