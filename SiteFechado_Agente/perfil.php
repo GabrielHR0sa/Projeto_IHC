@@ -1,3 +1,14 @@
+<?php
+
+// Iniciando a sessão e incluindo o arquivo com infos do BD 
+session_start();
+include_once("./db_config.php");
+
+$CPFUser = $_COOKIE['user'];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -30,7 +41,7 @@
         </svg>
       </a>
 
-      <a class="textosB marginESQ">Olá, 000.000.000-00</a>
+      <a class="textosB marginESQ">Olá,<?php echo($CPFUser) ?></a>
     </header>
 
     <div class="funcPerfil">

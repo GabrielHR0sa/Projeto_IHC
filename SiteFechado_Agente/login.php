@@ -27,7 +27,7 @@ if (isset($entrar)) {
       } else { 
         echo"<script language='javascript' type='text/javascript'>
         alert('Sucesso, você logou em uma conta!');window.location
-        .href='./perfil.html';</script>";
+        .href='./perfil.php';</script>";
 
         $cookie_name = "user";
         $cookie_value = $inputCPF;
