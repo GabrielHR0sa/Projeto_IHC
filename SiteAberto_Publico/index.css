@@ -32,6 +32,23 @@
     width: 50px;
 }
 
+.itemNav{
+    border-bottom: #00bf63 solid 2px;
+    border-radius: 10px;
+
+}
+
+.textoNav{
+    color: #00bf63;
+    margin-top: 10px;
+}
+
+.textoNav:hover{
+    color: #00bf63;
+    margin-top: 10px;
+}
+
+
 /* ======= BODY ======= */
 .contIndex {
     background-color: var(--main-background-color);
