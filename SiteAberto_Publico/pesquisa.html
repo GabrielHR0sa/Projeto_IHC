@@ -5,31 +5,88 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Casos Dengue</title>
-  <link rel="stylesheet" href="bootstrap5/css/bootstrap.css">
-  <link rel="stylesheet" href="style1.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <script type="text/javascript" src="jquery-3.6.1.min.js"></script>
 
+  <title>Foco na Dengue - Pesquisa</title>
+
+  <link rel="stylesheet" href="bootstrap5/css/bootstrap.css">
+  <link rel="stylesheet" href="pesquisa.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script type="text/javascript" src="jquery-3.6.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Favicon do site -->
+  <link rel="icon" type="image/x-icon" href="imagem/logo.png">
+
+  <script>
+    $(document).ready(function() {
+        // Mapeando os dados para o filtro
+        var dadosFiltroBairroParaRua = {
+            "Selecione um BAIRRO"   :   ["Selecione uma RUA","Rua Campos Sales", "Rua Treze de Maio", "Rua Marechal Deodoro","Rua Benedito Galdino", "Rua Osmar Mantovani", "Rua Rodolfo Silvestre", "Rua Adival Bertoli", "Rua Dr. Rafael Lofrano", "Rua Augusto Troiano"],
+            "Centro"                :   ["Selecione uma RUA","Rua Campos Sales", "Rua Treze de Maio", "Rua Marechal Deodoro"],
+            "Jardim Santo Antônio"  :   ["Selecione uma RUA", "Rua Benedito Galdino", "Rua Osmar Mantovani", "Rua Rodolfo Silvestre"],
+            "Jardim Paraiso I"      :   ["Selecione uma RUA","Rua Adival Bertoli", "Rua Dr. Rafael Lofrano", "Rua Augusto Troiano"]
+        };
+  
+        // Manipulador do evento change do primeiro select
+        $("#Bairro").change(function() {
+            var selecionado = $(this).val();
+  
+            // Limpa o segundo select
+            $("#Rua").empty();
+  
+            // Verifica se há dados para o valor selecionado no primeiro select
+            if (dadosFiltroBairroParaRua.hasOwnProperty(selecionado)) {
+                var opcoes = dadosFiltroBairroParaRua[selecionado];
+                // Preenche o segundo select com as opções filtradas
+                $.each(opcoes, function(index, opcao) {
+                    $("#Rua").append("<option value='" + opcao + "'>" + opcao + "</option>");
+                });
+            }
+        });
+    });
+  </script>
 
 </head>
 
 <body class="contIndex">
 
+  <!-- Menu superior -->
   <header class=" d-flex flex-wrap justify-content-center py-3 mb-4 barra">
+    <!-- Logo e nome do projeto -->
     <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto textosB">
       <img src="imagem/logo.png" class="imgIndex">
-      <strong>Projeto - Foco na Dengue</strong>
+      <strong>Foco na Dengue</strong>
     </a>
 
+    <!-- Ações -->
     <ul class="nav nav-pills ">
-      <li class="nav-item"><a href="index.html" class="nav-link textosB">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+      <!-- Pesquisar -->
+      <li class="nav-item">
+        <a href="index.html" class="nav-link textosB">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-house"
+            viewBox="0 0 16 16">
+            <path
+              d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
           </svg>
-          <strong>Início</strong></a></li>
-      <li class="nav-item"><a href="previnir.html" class="nav-link textosB">
+          <strong>Início</strong>
+        </a>
+      </li>
+
+      <!-- Pesquisar -->
+      <li class="nav-item">
+        <a href="pesquisa.html" class="nav-link textosB">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search"
+            viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg>
+          <strong>Pesquisar focos</strong>
+        </a>
+      </li>
+
+      <!-- Como se prevenir -->
+      <li class="nav-item">
+        <a href="prevenir.html" class="nav-link textosB">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bandaid"
             viewBox="0 0 16 16">
             <path
@@ -37,8 +94,13 @@
             <path
               d="M5.56 7.646a.5.5 0 1 1-.706.708.5.5 0 0 1 .707-.708Zm1.415-1.414a.5.5 0 1 1-.707.707.5.5 0 0 1 .707-.707ZM8.39 4.818a.5.5 0 1 1-.708.707.5.5 0 0 1 .707-.707Zm0 5.657a.5.5 0 1 1-.708.707.5.5 0 0 1 .707-.707ZM9.803 9.06a.5.5 0 1 1-.707.708.5.5 0 0 1 .707-.707Zm1.414-1.414a.5.5 0 1 1-.706.708.5.5 0 0 1 .707-.708ZM6.975 9.06a.5.5 0 1 1-.707.708.5.5 0 0 1 .707-.707ZM8.39 7.646a.5.5 0 1 1-.708.708.5.5 0 0 1 .707-.708Zm1.413-1.414a.5.5 0 1 1-.707.707.5.5 0 0 1 .707-.707Z" />
           </svg>
-          <strong>Como se Previnir</strong></a></li>
-      <li class="nav-item"><a href="sintomas.html" class="nav-link textosB">
+          <strong>Como se Prevenir</strong>
+        </a>
+      </li>
+
+      <!-- Sintomas -->
+      <li class="nav-item">
+        <a href="sintomas.html" class="nav-link textosB">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-hospital"
             viewBox="0 0 16 16">
             <path
@@ -46,63 +108,79 @@
             <path
               d="M5 1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1a1 1 0 0 1 1 1v4h3a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h3V3a1 1 0 0 1 1-1V1Zm2 14h2v-3H7v3Zm3 0h1V3H5v12h1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3Zm0-14H6v1h4V1Zm2 7v7h3V8h-3Zm-8 7V8H1v7h3Z" />
           </svg>
-          <strong>Sintomas</strong></a></li>
-
+          <strong>Sintomas</strong>
+        </a>
+      </li>
     </ul>
   </header>
 
   <main>
     <div class="interior">
-        <div class="album py-5">
-            <div class="container">
+      <div class="album py-5">
+        <div class="container">
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor"
-                    class="bi bi-search" viewBox="0 0 16 16">
-                    <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" style="color: #30405c">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg>
+
+          <h1 class="textos"><strong>PESQUISAR FOCOS</strong></h1>
+          <p class="textos">Preencha os campos e depois clique em "Pesquisar"</p>
+          <p class="textos">Escolha primeiro o BAIRRO pois assim as ruas serão filtradas!</p><br>
+
+          <form method="POST" action="pesquisarController.php">
+            <!-- Bairros -->
+            <select class="marginTop form-select" id="Bairro" name="Bairro">
+              <option selected value="Selecione um BAIRRO">Selecione um BAIRRO</option>
+              <option value="Centro">Centro</option>
+              <option value="Jardim Santo Antônio">Jardim Santo Antônio</option>
+              <option value="Jardim Paraiso I">Jardim Paraiso I</option>
+            </select>
+
+            <!-- Bairros -->
+            <select class="marginTop form-select" id="Rua" name="Rua">
+              <option selected value="Selecione uma RUA">Selecione uma RUA</option>
+              <!--CENTRO-->
+              <option value="Rua Campos Sales">Rua Campos Sales</option>
+              <option value="Rua Treze de Maio">Rua Treze de Maio</option>
+              <option value="Rua Marechal Deodoro">Rua Marechal Deodoro</option>
+              <!--JARDIM SANTO ANTONIO-->
+              <option value="Rua Benedito Galdino">Rua Benedito Galdino</option>
+              <option value="Rua Osmar Mantovani">Rua Osmar Mantovani</option>
+              <option value="Rua Rodolfo Silvestre">Rua Rodolfo Silvestre </option>
+              <!--JARDIM PARAISO I-->
+              <option value="Rua Adival Bertoli">Rua Adival Bertoli</option>
+              <option value="Rua Dr. Rafael Lofrano">Rua Dr. Rafael Lofrano</option>
+              <option value="Rua Augusto Troiano">Rua Augusto Troiano</option>
+            </select>
+
+            <br>
+            <br>
+
+            <div class="bloco1">
+              <button type="submit" value="PESQUISAR" id="acao" name="acao" class="bton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                 </svg>
-
-                <h1 class="textos"><strong>PESQUISAR FOCOS</strong></h1>
-                <p class="textos">Selecione por qual campo deseja efetuar a busca</p><br>
-
-                <label for="inputEnd" class="sr-only">Endereço</label>
-                <input type="text" id="inputEnd" class="marginTop" placeholder="Endereço" required="" autofocus="">
-                <br>
-                <label for="inputBairro" class="sr-only">Bairro</label>
-                <input type="text" id="inputBairro" class="marginTop" placeholder="Bairro" required="" autofocus="">
-                <br>
-                <label for="inputCidade" class="sr-only">Cidade</label>
-                <input type="text" id="inputCidade" class="marginTop" placeholder="Cidade" required="" autofocus="">
-                <br><br>
-                <div class="bloco1">
-                    <a href="#" class="bton">Pesquisar</a>
-                </div>
-
-                <div class="funcPerfil backPesquisa">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor"
-                        class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
-                        <path
-                            d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z" />
-                        <path
-                            d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z" />
-                    </svg>
-                    <h1 class="textosB"><strong>15 casos</strong></h1>
-                </div>
-
+                PESQUISAR
+              </button>
             </div>
+          </form>
         </div>
+      </div>
+    </div>
+  </main>
 
 
-</main>
-
-  </div>
-
+  <!-- Rodapé -->
   <footer class="mt-5 rodape">
     <div class="conteudo_final">
       <p class="textoB">Em caso de dúvidas, por favor <a href="#" class="textosB"><strong>clicar aqui</strong></a></p>
     </div>
-
   </footer>
+
+
 </body>
 
 </html>

@@ -1,3 +1,14 @@
+<?php
+
+// Iniciando a sessão e incluindo o arquivo com infos do BD 
+session_start();
+include_once("./db_config.php");
+
+$CPFUser = $_COOKIE['user'];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -5,13 +16,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Casos Dengue</title>
+
+  <title>Foco na Dengue - Perfil</title>
+  
   <link rel="stylesheet" href="bootstrap5/css/bootstrap.css">
   <link rel="stylesheet" href="style1.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <script type="text/javascript" src="jquery-3.6.1.min.js"></script>
 
+  <!-- Favicon do site -->
+  <link rel="icon" type="image/x-icon" href="imagem/logo.png">
 </head>
 
 <body class="contPerfil">
@@ -27,7 +41,7 @@
         </svg>
       </a>
 
-      <a class="textosB marginESQ">Olá, 000.000.000-00</a>
+      <a class="textosB marginESQ">Olá,<?php echo($CPFUser) ?></a>
     </header>
 
     <div class="funcPerfil">
@@ -42,7 +56,7 @@
               d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z" />
           </svg> Reportar Foco</a>
 
-        <a href="pesquisar.html" class="funcPerfil backPerfil textosB">
+        <a href="pesquisar.php" class="funcPerfil backPerfil textosB">
           <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-search"
             viewBox="0 0 16 16">
             <path

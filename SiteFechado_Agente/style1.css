@@ -54,9 +54,9 @@
 }
 
 .bton {
-    background-color: #00BF63;
+    background-color: #074728;
     color: #fff;
-    border: solid 1px #00BF63;
+
     transition: 0.3s;
     border-radius: 7px;
     padding: 10px 40px;
@@ -65,8 +65,8 @@
 }
 
 .bton:hover {
-    background-color: rgb(255, 255, 255);
-    color: #00BF63;
+    background-color: #00BF63;
+    color: #ffffff;
     text-decoration: none;
 }
 
