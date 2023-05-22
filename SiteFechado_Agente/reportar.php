@@ -12,9 +12,39 @@
   <link rel="stylesheet" href="style1.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <script type="text/javascript" src="jquery-3.6.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <!-- Favicon do site -->
   <link rel="icon" type="image/x-icon" href="imagem/logo.png">
+
+  <script>
+      $(document).ready(function() {
+          // Mapeando os dados para o filtro
+          var dadosFiltroBairroParaRua = {
+              "Selecione um BAIRRO"   :   ["Selecione uma RUA","Rua Campos Sales", "Rua Treze de Maio", "Rua Marechal Deodoro","Rua Benedito Galdino", "Rua Osmar Mantovani", "Rua Rodolfo Silvestre", "Rua Adival Bertoli", "Rua Dr. Rafael Lofrano", "Rua Augusto Troiano"],
+              "Centro"                :   ["Selecione uma RUA","Rua Campos Sales", "Rua Treze de Maio", "Rua Marechal Deodoro"],
+              "Jardim Santo Antônio"  :   ["Selecione uma RUA", "Rua Benedito Galdino", "Rua Osmar Mantovani", "Rua Rodolfo Silvestre"],
+              "Jardim Paraiso I"      :   ["Selecione uma RUA","Rua Adival Bertoli", "Rua Dr. Rafael Lofrano", "Rua Augusto Troiano"]
+          };
+
+          // Manipulador do evento change do primeiro select
+          $("#Bairro").change(function() {
+              var selecionado = $(this).val();
+
+              // Limpa o segundo select
+              $("#Rua").empty();
+
+              // Verifica se há dados para o valor selecionado no primeiro select
+              if (dadosFiltroBairroParaRua.hasOwnProperty(selecionado)) {
+                  var opcoes = dadosFiltroBairroParaRua[selecionado];
+                  // Preenche o segundo select com as opções filtradas
+                  $.each(opcoes, function(index, opcao) {
+                      $("#Rua").append("<option value='" + opcao + "'>" + opcao + "</option>");
+                  });
+              }
+          });
+      });
+  </script>
 </head>
 
 <body class="contPerfil">
@@ -37,12 +67,13 @@
             <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z" />
           </svg>
           <h1 class="textos"><strong>Reportar Foco</strong></h1>
-          <h2 class="textos">Dados - Endereço</h2><br>
+          <h2 class="textos">Dados - Endereço</h2>
+          <p class="textos">Escolha primeiro o BAIRRO pois assim as ruas serão filtradas!</p><br>
 
 
           <!-- Bairros -->
           <select class="marginTop form-select" id="Bairro" name="Bairro">
-            <option selected value="0">Selecione um BAIRRO</option>
+            <option selected value="Selecione um BAIRRO">Selecione um BAIRRO</option>
             <option value="Centro">Centro</option>
             <option value="Jardim Santo Antônio">Jardim Santo Antônio</option>
             <option value="Jardim Paraiso I">Jardim Paraiso I</option>
@@ -50,7 +81,7 @@
           
           <!-- Bairros -->
           <select class="marginTop form-select" id="Rua" name="Rua">
-            <option selected value="0">Selecione uma RUA</option>
+            <option selected value="Selecione uma RUA">Selecione uma RUA</option>
             <!--CENTRO-->
             <option value="Rua Campos Sales">Rua Campos Sales</option>
             <option value="Rua Treze de Maio">Rua Treze de Maio</option>

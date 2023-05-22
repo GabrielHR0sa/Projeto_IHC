@@ -6,13 +6,13 @@
     $acao       =       isset($_POST['acao'])   ? $_POST['acao']    : '';
 
     if ($acao == "PESQUISAR") {
-        if ($Bairro == "0" || $Bairro == 0 || $Rua == "0" || $Rua == 0) {
-            if ($Bairro == "0" || $Bairro == 0) {
+        if ($Bairro == "Selecione um BAIRRO" || $Rua == "Selecione uma RUA") {
+            if ($Bairro == "Selecione um BAIRRO") {
                 echo"<script language='javascript' type='text/javascript'>
                 alert('Infelizmente você esqueceu de colocar o BAIRRO do reporte! Preencha ambos os campos');
                 window.location.href='./pesquisar.php';</script>";
             }
-            else if ( $Rua == "0" || $Rua == 0) {
+            else if ($Rua == "Selecione uma RUA") {
                 echo"<script language='javascript' type='text/javascript'>
                 alert('Infelizmente você esqueceu de colocar a RUA do reporte! Preencha ambos os campos');
                 window.location.href='./pesquisar.php';</script>";
@@ -26,7 +26,7 @@
 
             echo ("<script language='javascript' type='text/javascript'>
             alert('Bairro: " . $Bairro . " - Rua: " . $Rua . " --> Número de casos: " . $num_reportes . " (Clique em OK para voltar!)');
-            window.location.href='./pesquisa.html';</script>");
+            window.location.href='./pesquisar.php';</script>");
         }
     }
 ?>

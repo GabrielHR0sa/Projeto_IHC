@@ -8,19 +8,17 @@
     $CPFUser = $_COOKIE['user'];
 
     if ($acao == "SALVAR") {
-        if ($Bairro == "0" || $Bairro == 0 || $Rua == "0" || $Rua == 0) {
-            if ($Bairro == "0" || $Bairro == 0) {
+        if ($Bairro == "Selecione um BAIRRO" || $Rua == "Selecione uma RUA") {
+            if ($Bairro == "Selecione um BAIRRO") {
                 echo"<script language='javascript' type='text/javascript'>
                 alert('Infelizmente você esqueceu de colocar o BAIRRO do reporte! Preencha ambos os campos');
                 window.location.href='./reportar.php';</script>";
             }
-            else if ( $Rua == "0" || $Rua == 0) {
+            else if ($Rua == "Selecione uma RUA") {
                 echo"<script language='javascript' type='text/javascript'>
                 alert('Infelizmente você esqueceu de colocar a RUA do reporte! Preencha ambos os campos');
                 window.location.href='./reportar.php';</script>";
             }
-           
-            return;
         }
         else {
             $sql = "INSERT INTO dados_reporte (CPF_reporte, Bairro, Rua) values ('$CPFUser','$Bairro', '$Rua')";
