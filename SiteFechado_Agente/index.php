@@ -23,6 +23,15 @@ include_once("./db_config.php")
 
   <!-- Favicon do site -->
   <link rel="icon" type="image/x-icon" href="imagem/logo.png">
+
+  <script>
+    function exibirContato() {
+      var telefone = "123456789";
+      var email = "exemplo@example.com";
+      var mensagem = "Telefone: " + telefone + "\nE-mail: " + email;
+      alert(mensagem);
+    }
+  </script>
 </head>
 
 <body class="perfil">
@@ -64,7 +73,7 @@ include_once("./db_config.php")
               </button>
             </div>
             <br>
-            <p class="textos">Em caso de dúvidas, por favor <a href="#" class="textos"><strong>clicar aqui</strong></a></p>
+            <p class="textos">Em caso de problemas, por favor <a href="#" class="textos" onclick="exibirContato()"><strong>clique aqui</strong></a></p>
           </form>
         </div>
 

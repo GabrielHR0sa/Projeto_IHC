@@ -15,6 +15,15 @@
 
   <!-- Favicon do site -->
   <link rel="icon" type="image/x-icon" href="imagem/logo.png">
+
+  <script>
+    function exibirContato() {
+      var telefone = "123456789";
+      var email = "exemplo@example.com";
+      var mensagem = "Telefone: " + telefone + "\nE-mail: " + email;
+      alert(mensagem);
+    }
+  </script>
 </head>
 
 <body class="contIndex">
@@ -132,7 +141,7 @@
   <!-- Rodapé -->
   <footer class="mt-5 rodape">
     <div class="conteudo_final">
-      <p class="textoB">Em caso de dúvidas, por favor <a href="#" class="textosB"><strong>clicar aqui</strong></a></p>
+      <p class="textoB">Em caso de problemas, por favor <a href="#" class="textosB" onclick="exibirContato()"><strong>clique aqui</strong></a></p>
     </div>
   </footer>
 

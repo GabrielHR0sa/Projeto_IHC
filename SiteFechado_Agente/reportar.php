@@ -44,6 +44,14 @@
               }
           });
       });
+
+      
+    function exibirContato() {
+      var telefone = "123456789";
+      var email = "exemplo@example.com";
+      var mensagem = "Telefone: " + telefone + "\nE-mail: " + email;
+      alert(mensagem);
+    }
   </script>
 </head>
 
@@ -113,7 +121,7 @@
       <br>
       <br>
 
-      <p class="textos">Em caso de dúvidas, por favor <a href="#" class="textos"><strong>clicar aqui</strong></a></p>
+      <p class="textos">Em caso de problemas, por favor <a href="#" class="textos" onclick="exibirContato()"><strong>clique aqui</strong></a></p>
 
     </div>
 
