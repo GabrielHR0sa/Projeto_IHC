@@ -2,9 +2,9 @@
 
 $enderecoServidor = '127.0.0.1';
 $nomeBanco = 'focoNaDengue';
-$porta = '3312';
+$porta = '3306';
 $usuario = 'root';
-$senha = '';
+$senha = 'root123456789';
 
 $conexao = mysqli_connect($enderecoServidor, $usuario, $senha, $nomeBanco,  $porta);
 
